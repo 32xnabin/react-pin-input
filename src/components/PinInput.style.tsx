@@ -25,3 +25,8 @@ export const StyledPinInput = styled.input<ColorProps>`
 `;
 
 
+
+export const Message = styled.p<ColorProps>`
+  color: ${props => props.isCorrect ? 'green' : 'red'}
+`;
+

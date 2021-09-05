@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { StyledPinInput } from './PinInput.style';
+import { StyledPinInput,Message } from './PinInput.style';
 
 interface IProps {
   pin: Array<number | undefined>;
@@ -27,6 +27,7 @@ const PinInput: React.FC<IProps> = ({
   pinLength,
   pin,
   onPinChanged,
+  validationMessage,
   validationResult,
   isValidating,
 }) => {
@@ -102,6 +103,9 @@ const PinInput: React.FC<IProps> = ({
           />
         ))}
       </div>
+      <Message isCorrect={validationResult}>
+        {validationMessage}
+      </Message>
     </>
   );
 };
