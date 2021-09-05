@@ -57,6 +57,7 @@ function App() {
 
   return (
     <div className="App">
+      <p>VALIDATE PIN</p>
       <PinInput
         isValidating={isValidating}
         validationMessage={validationMessage}
